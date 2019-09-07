@@ -4,7 +4,7 @@ class DB{
 
 /**
  *	@author Dinar Hamid
- *  @version 1.0
+ *  	@version 1.0
  *	@license MIT
  *	https://opensource.org/licenses/MIT
  */
