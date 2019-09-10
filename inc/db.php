@@ -4,7 +4,7 @@ class DB{
 
 /**
  *	@author Dinar Hamid
- *  	@version 1.0
+ *  @version 1.0
  *	@license MIT
  *	https://opensource.org/licenses/MIT
  */
@@ -49,16 +49,16 @@ class DB{
 
   public function cari($search){
 
-  		$prepare = $this->db->prepare("SELECT id,title,isi FROM news WHERE title LIKE ?");
+  		$prepare = $this->db->prepare("SELECT * FROM news WHERE title LIKE ?");
 
   		$prepare->bind_param("s", $search);
 
   		$prepare->execute();
 
-  		$prepare->bin_result($title, $isi);
+  		$title = $prepare->get_result();
 
-  		while($prepare->fetch()){
-  			return $title."<br>".$isi;
+  		while($result=$title->fetch_row()){
+  			return $result;
   		}
   		$prepare->close();
   		$this->db->close();
