@@ -1,8 +1,6 @@
 <?php
-
 require_once "load.php";
 include __DIR__ . "/theme/head.php";
-
 if(isset($_POST['cari'])){
 $search = @"%{$_POST['cari']}%";
 $tampil = $db->cari($search);
@@ -15,7 +13,7 @@ $tampil = $db->cari($search);
 </div>
     <div class="col">
    <div class="col-md">
-      <div class="card" style="width: 18rem;">
+      <div class="card" style="width: 18rem; margin-left: 6rem;">
         <!-- <img src="img/thumbs/3.png" class="card-img-top" alt="Card image cap"> -->
         <div class="card-body">
           <span id="admin"><?php echo $tampil['4'];?></span>
@@ -25,7 +23,7 @@ $tampil = $db->cari($search);
           <p class="card-text text-justify"><?php echo substr($tampil['2'],0,100);?>..</p>
           <a href="<?php echo 'articles/'.$tampil['0'];?>" class="btn btn-primary">Read more</a>
         </div>
-      </div>
+     </div>
     </div>
   </div>
 </section>
