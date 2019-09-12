@@ -43,6 +43,14 @@
   float: right;
   font-size: 13px;
 }
+.container-artikel{
+  width: 700px;
+  margin-left: 8rem;
+}
+.card{
+  margin-left: 6rem;
+  margin-bottom: 10px;
+}
   </style>
   </head>
   <body class="mt-5">
