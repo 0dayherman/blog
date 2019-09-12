@@ -28,6 +28,7 @@
 .card{
   margin-left: 6rem;
   margin-bottom: 10px;
+    }
 @keyframes cursor {
     0%,
     100%,
