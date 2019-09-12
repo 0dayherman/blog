@@ -30,6 +30,11 @@ CREATE TABLE IF NOT EXIST `news` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 INSERT INTO `news` (`id`, `title`, `isi`, `tanggal`, `penerbit`) VALUES
-(1,	'Toturial Belajar',	'test',	'2019-09-17',	'admin');
+(1,	'Hello Word',	'Hello Word',	'2019-09-17',	'admin');
 
+INSERT INTO `news` (`id`, `title`, `isi`, `tanggal`, `penerbit`) VALUES
+(2,	'Hello Word 2',	'Hello Word',	'2019-09-17',	'admin');
+
+INSERT INTO `news` (`id`, `title`, `isi`, `tanggal`, `penerbit`) VALUES
+(3,	'Hello Word 3',	'Hello Word',	'2019-09-17',	'admin');
 -- 2019-09-12 08:50:29
