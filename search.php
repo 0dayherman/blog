@@ -1,6 +1,6 @@
 <?php
 
-require_once "/load.php";
+require_once "load.php";
 include __DIR__ . "/theme/head.php";
 
 if(isset($_POST['cari'])){
@@ -31,4 +31,4 @@ $tampil = $db->cari($search);
 </section>
 <?php
 }
-include "/theme/footer.php";
+include "theme/footer.php";
