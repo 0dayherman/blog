@@ -1,21 +1,20 @@
 <?php
-
 class DB{
 
-/**
- *	@author Dinar Hamid
- *  @version 1.0
- *	@license MIT
- *	https://opensource.org/licenses/MIT
- */
+	/**
+ 	*	@author Dinar Hamid
+ 	*   	@version 1.0
+ 	*	@license MIT
+ 	*	https://opensource.org/licenses/MIT
+ 	*/
 
-	public $host;
+	public $host = '';
 
-	public $user;
+	public $user = '';
 
-	public $password;
+	public $password = '';
 
-	public $dbname;
+	public $dbname = '';
 
 	public $db;
 
@@ -29,7 +28,7 @@ class DB{
 
  	}
 
-	public function artikel($id){
+	public function articles($id){
 
 		$prepare = $this->db->prepare("SELECT * FROM news WHERE id = ?");
 
@@ -45,7 +44,7 @@ class DB{
 		$prepare->close();
 		$this->db->close();
 
-  }
+  	}
 
   public function cari($search){
 
@@ -61,7 +60,31 @@ class DB{
   			return $result;
   		}
   		$prepare->close();
+
   		$this->db->close();
-  }
+  	}
+
+  public function login($username,$password){
+
+  		$prepare = $this->db->prepare("SELECT * FROM admin WHERE username = ? AND password = ?");
+
+  		$prepare->bind_param("ss",$username,$password);
+
+  		$prepare->execute();
+
+  		$result = $prepare->get_result();
+
+  		while($pecah=$result->fetch_row()){
+  			if($username == $pecah['3'] AND $password == $pecah['4']){
+  				return $pecah;
+  			} else {
+  				return "ERROR";
+  			}
+  		}
+
+  		$prepare->close();
+
+  		$this->db->close();
+  	}
 
 }
