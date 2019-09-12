@@ -9,20 +9,20 @@ $tampil = $db->cari($search);
 ?>
 <section id="artikel" class="artikel bg-light">
 <div class="container">
-  <div class="row mb-3 pt-4">
-  	<h3><?php echo "You Search : ".htmlspecialchars($_POST['cari']);?></h3>
+  <div class="row mb-3 pt-5 ml-1">
+    <h3><?php echo "You Search : ".htmlspecialchars($_POST['cari']);?></h3>
 </div>
 </div>
-    <div class="col text-center">
+    <div class="col">
    <div class="col-md">
-      <div class="card">
-        <img src="img/thumbs/3.png" class="card-img-top" alt="Card image cap">
+      <div class="card" style="width: 18rem;">
+        <!-- <img src="img/thumbs/3.png" class="card-img-top" alt="Card image cap"> -->
         <div class="card-body">
           <span id="admin"><?php echo $tampil['4'];?></span>
           <span id="date"><?php echo $tampil['3'];?></span>
-          <i class="fa fa-comment-o" id="comment"> 2</i>
+          <!-- <i class="fa fa-comment-o" id="comment"> 2</i> -->
           <h5 class="card-title"><?php echo $tampil['1'];?></h5>
-          <p class="card-text"><?php echo $tampil['2'];?></p>
+          <p class="card-text text-justify"><?php echo substr($tampil['2'],0,100);?>..</p>
           <a href="<?php echo 'artikel.php?id='.$tampil['0'];?>" class="btn btn-primary">Read more</a>
         </div>
       </div>
