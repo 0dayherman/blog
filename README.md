@@ -1,4 +1,3 @@
 # blog
 >Simple Blog By Dinar Hamid &amp; Hermansyah
-
->for sql file i will upload soon.
+>SQL File was uploaded, you can try this blog sample now!
