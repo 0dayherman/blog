@@ -5,10 +5,10 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-CREATE DATABASE `dbtest` /*!40100 DEFAULT CHARACTER SET latin1 */;
+CREATE DATABASE IF NOT EXIST `dbtest` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `dbtest`;
 
-CREATE TABLE `admin` (
+CREATE TABLE IF NOT EXIST `admin` (
   `id_admin` int(11) NOT NULL AUTO_INCREMENT,
   `nama_admin` varchar(50) NOT NULL,
   `email_admin` varchar(100) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `email_admin`, `username`, `password`) VALUES
 (1,	'Dinar Hamid',	'dinar1337@outlook.com',	'dinar1337',	'dinar1337');
 
-CREATE TABLE `news` (
+CREATE TABLE IF NOT EXIST `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(25) NOT NULL,
   `isi` longtext NOT NULL,
