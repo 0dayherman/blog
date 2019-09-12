@@ -5,16 +5,14 @@
  *
  */
 
-
-include "inc/config.php";
-include "head.php";
-
+require_once __DIR__ . "/load.php";
+include __DIR__ . "/theme/head.php";
 echo "<br><br><br>";
-
+if(@$_GET['id']){
 $id = @$_GET['id'];
-$tampil = $db->artikel($id);
-echo $tampil['1'];
-echo "<br>";
-echo $tampil['2'];
-echo "<br><br><br>";
-include "footer.php";
+$tampil = $db->articles($id);
+	echo $tampil['1'];
+} else {
+	# echo $db->thumb_artikel();
+}
+include __DIR__ . "/theme/footer.php";
