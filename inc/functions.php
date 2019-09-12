@@ -14,8 +14,8 @@ function connect_to_db(){
 		return;
 	}
 
-	$host 	  = defined( 'HOST' ) ? HOST : '';
-	$username = defined( 'USERNAME' ) ? USERNAME : '';
+	$host 	  =	defined( 'HOST' ) ? HOST : '';
+	$username =	defined( 'USERNAME' ) ? USERNAME : '';
 	$password = defined( 'PASSWORD' ) ? PASSWORD : '';
 	$database = defined( 'DATABASE' ) ? DATABASE : '';
 
@@ -35,4 +35,16 @@ function error($er){
 		echo '<link rel="stylesheet" href="theme/css/error.css">';
 		echo '<p class="error">'.($er).'</p>';
 		
+}
+
+function root(){
+		global $root;
+
+		require_once __DIR__. "/../config.php";
+
+		if(isset($root)){
+			return;
+		}
+
+		$root = defined( 'ROOT' ) ? ROOT : '';
 }
