@@ -1,10 +1,8 @@
 <?php
 
-include "inc/config.php";
-include "head.php";
+require_once "/load.php";
+include __DIR__ . "/theme/head.php";
 
-?>
-<?php 
 if(isset($_POST['cari'])){
 $search = @"%{$_POST['cari']}%";
 $tampil = $db->cari($search);
@@ -25,7 +23,7 @@ $tampil = $db->cari($search);
           <i class="fa fa-comment-o" id="comment"> 2</i>
           <h5 class="card-title"><?php echo $tampil['1'];?></h5>
           <p class="card-text"><?php echo $tampil['2'];?></p>
-          <a href="#" class="btn btn-primary">Read more</a>
+          <a href="<?php echo 'artikel.php?id='.$tampil['0'];?>" class="btn btn-primary">Read more</a>
         </div>
       </div>
     </div>
@@ -33,4 +31,4 @@ $tampil = $db->cari($search);
 </section>
 <?php
 }
-include "footer.php";
+include "/theme/footer.php";
