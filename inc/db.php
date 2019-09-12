@@ -3,7 +3,7 @@ class DB{
 
 	/**
  	*	@author Dinar Hamid
- 	*   	@version 1.0
+ 	*   @version 1.0
  	*	@license MIT
  	*	https://opensource.org/licenses/MIT
  	*/
@@ -85,6 +85,21 @@ class DB{
   		$prepare->close();
 
   		$this->db->close();
+  	}
+
+  	public function thumbs_articles(){
+
+  		$prepare = $this->db->prepare("SELECT * FROM news ORDER BY id");
+
+  		$prepare->execute();
+
+  		$result = $prepare->get_result();
+
+			include_once __DIR__ . "/../theme/thumbs_articles.php";
+
+    	$prepare->close();
+
+    	$this->db->close();
   	}
 
 }
