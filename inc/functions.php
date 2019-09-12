@@ -14,8 +14,8 @@ function connect_to_db(){
 		return;
 	}
 
-	$host 	  =	defined( 'HOST' ) ? HOST : '';
-	$username =	defined( 'USERNAME' ) ? USERNAME : '';
+	$host 	  = defined( 'HOST' ) ? HOST : '';
+	$username = defined( 'USERNAME' ) ? USERNAME : '';
 	$password = defined( 'PASSWORD' ) ? PASSWORD : '';
 	$database = defined( 'DATABASE' ) ? DATABASE : '';
 
