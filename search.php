@@ -23,7 +23,7 @@ $tampil = $db->cari($search);
           <!-- <i class="fa fa-comment-o" id="comment"> 2</i> -->
           <h5 class="card-title"><?php echo $tampil['1'];?></h5>
           <p class="card-text text-justify"><?php echo substr($tampil['2'],0,100);?>..</p>
-          <a href="<?php echo 'artikel.php?id='.$tampil['0'];?>" class="btn btn-primary">Read more</a>
+          <a href="<?php echo 'articles/'.$tampil['0'];?>" class="btn btn-primary">Read more</a>
         </div>
       </div>
     </div>
