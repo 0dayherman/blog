@@ -6,3 +6,5 @@ RewriteRule ^search search.php
 
 Options All -Indexes
 </IfModule>
+
+ErrorDocument 404 "https://localhost/blog/404.php"
