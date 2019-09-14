@@ -1,10 +1,5 @@
 <?php
 
-/*
- * Jadikan Sendiri lah wkwkwkwk
- *
- */
-
 require_once __DIR__ . "/load.php";
 include __DIR__ . "/theme/head.php";
 echo "<br><br><br>";
@@ -26,6 +21,6 @@ $tampil = $db->articles($id);
   </div>
 </section>';
 } else {
-	# echo $db->thumb_artikel();
+	$db->thumbs_articles();
 }
 include __DIR__ . "/theme/footer.php";
