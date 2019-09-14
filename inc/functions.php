@@ -1,14 +1,10 @@
 <?php
 
-
-/**
- * same as wordpress, i love wordpress
- */
 function connect_to_db(){
 	global $db;
 
-	require_once "db.php";
-	require_once __DIR__. "/../config.php";
+	require_once __DIR__ . "db.php";
+	require_once __DIR__ . "/../config.php";
 
 	if(isset($db)) {
 		return;
@@ -24,16 +20,17 @@ function connect_to_db(){
 }
 
 function check_installed(){
-
+	require_once __DIR__ . "/install.php";
 	if(!is_file(__DIR__ . "/../config.php")){
 		echo "This Not Installed Properly";
+		install();
 	}
 }
 
 function error($er){
 
 		echo '<link rel="stylesheet" href="theme/css/error.css">';
-		echo '<p class="error">'.($er).'</p>';
+		echo '<p class="error">'.$er.'</p>';
 		
 }
 
@@ -48,3 +45,4 @@ function root(){
 
 		$root = defined( 'ROOT' ) ? ROOT : '';
 }
+
