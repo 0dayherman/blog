@@ -25,10 +25,12 @@
   width: 700px;
   margin-left: 8rem;
 }
+
 .card{
   margin-left: 6rem;
   margin-bottom: 10px;
-    }
+  }
+
 @keyframes cursor {
     0%,
     100%,
