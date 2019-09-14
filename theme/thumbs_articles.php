@@ -1,4 +1,12 @@
-<?php while($pecah=$result->fetch_row()) { ?>
+<section id="artikel" class="artikel bg-light">
+  <div class="row mb-3 pt-4">
+    <div class="col text-center">
+      <h3>Artikel</h3>
+    </div>
+  </div>
+ <div class="container">
+  <div class="row mb-4">
+  <?php while($pecah=$result->fetch_row()) { ?>
     <div class="col-md">
       <div class="card">
         <img src="img/thumbs/1.png" class="card-img-top" alt="Card image cap">
@@ -12,5 +20,6 @@
       </div>
      </div>
     </div>
-<?php
-}
+    <?php } ?>
+    </div>
+ </div>
