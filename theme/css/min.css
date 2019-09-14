@@ -1,0 +1,42 @@
+.error{
+	font-family:monospace;
+	color: black;
+	padding: 5px;
+	position: absolute;
+	font-variant-position: center;
+}
+.notfound {	
+     background-color: #fff;
+     color: #636b6f;
+     font-family: monospace, sans-serif;
+     font-weight: auto;
+     height: 0vh;
+     margin: 200px;
+     font-size: 30px;
+     padding: 0px;
+     text-align: center;
+  }
+a {
+    text-decoration: none;
+    font-family: monospace, sans-serif;
+    color: #636b6f;
+  }
+
+ .background {
+  width: 200px;
+  height: 200px;
+  display: block;
+  position: relative;
+}
+
+.background::after {
+  content: "";
+  background: url(../../img/background/bg1.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
