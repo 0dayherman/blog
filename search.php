@@ -1,3 +1,4 @@
+
 <?php
 require_once "load.php";
 include __DIR__ . "/theme/head.php";
@@ -28,5 +29,7 @@ $tampil = $db->cari($search);
   </div>
 </section>
 <?php
+} else {
+    $db->thumbs_articles();
 }
 include "theme/footer.php";
