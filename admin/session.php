@@ -1,4 +1,5 @@
 <?php
+/* code by Dinar Hamid */
 class session{
 
 	public $go = '';
@@ -20,6 +21,7 @@ class session{
 			 header("Location: ".@$this->pisah['1']);
 
 		}
+		exit;
 	}
 	public function login(){
 
@@ -28,5 +30,22 @@ class session{
 		if(@$_SESSION[md5('id_admin')]){
 			header("Location: ".@$this->go);
 		}
+	}
+	public function check_admin(){
+
+		@session_start();
+
+		if(!isset($_SESSION[md5('id_admin')])){
+			header("Location: ".@$this->go);
+			exit;
+		}
+	}
+
+	public function out(){
+		session_start();
+		session_unset($_SESSION[md5('id_admin')]);
+		unset($_SESSION[md5('id_admin')]);
+		header("Location: login.php");
+		exit;
 	}
 }
