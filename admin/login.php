@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Login Admin</title>
-	<link href="assets/css/bootstrap.css" rel="stylesheet" />
 	<style type="text/css">
 	body{background: #eee url();}
 	html,body{
@@ -167,9 +166,10 @@ if(@$_POST['username']){
 	if($login){
 		echo '<script>alert("Login Succesfuly")</script>';
 		@$_SESSION[md5('id_admin')] = $login['0'];
+		$session->login();
 	} else {
 		echo '<script>alert("Login Failed")</script>';
 	}
-
+	exit;
 }
 ?>
