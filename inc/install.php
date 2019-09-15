@@ -18,7 +18,7 @@ function set_config($user,$pass,$host,$db,$root){
 
 function set_htaccess(){
 
-	$p	fopen('../.htaccess', 'a+');
+	$p = fopen('../.htaccess', 'a+');
 		fwrite('<IfModule mod_rewrite.c>', $p);
 		fwrite('RewriteEngine on',$p);
 		fwrite('RewriteRule ^articles/(.*) artikel.php?id=$1 [L]',$p);
@@ -26,5 +26,5 @@ function set_htaccess(){
 		fwrite('Options All -Indexes', $p);
 		fwrite('</IfModule>', $p);
 		fwrite('ErrorDocument 404 "https://localhost/blog/404.php"',$p);
-		fclose($p);
+	fclose($p);
 }
