@@ -15,7 +15,7 @@
           <span id="date"><?php echo $pecah['3'];?></span>
           <i class="fa fa-comment-o" id="comment"> 2</i>
           <h5 class="card-title"><?php echo $pecah['1'];?></h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-text text-justify"><?php echo substr($pecah['2'], 0,80);?>..</p>
           <a href="articles/<?php echo $pecah['0'];?>" class="btn btn-primary">Read more</a>
       </div>
      </div>
